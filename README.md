@@ -1,1 +1,1 @@
-# testcedra
+# Тестовое задание для cedro.agency
