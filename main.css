@@ -6,7 +6,7 @@ html {
 
 body {
   background-color: #FF9100;
-  margin: 0px;
+  margin: auto;
   display: flex;
   flex-direction: column;
 }
@@ -35,7 +35,7 @@ marquee {
   border: solid 3px #000;
   border-left: none;
   border-right: none;
-  background-color: blueviolet;
+  background-color: #6300FF;
   color: #FF9100;
   font-family: 'Press Start 2P', monospace;
 }
@@ -47,6 +47,16 @@ marquee {
   flex-direction: row;
   align-items: flex-start;
   justify-self: flex-start;
+  margin-right: 30px;
+}
+
+.illust {
+  align-self: flex-start;
+  width: 50vw;
+  height: auto;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
 #mainillustration {
@@ -58,13 +68,32 @@ marquee {
   top: 0;
 }
 
+#questionmark {
+  position: absolute;
+  left: 73%;
+  top: 245px;
+  width: 100px;
+  height: auto;
+
+  animation-name: mymove;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes mymove {
+  0%   {top: 65px;}
+  50%  {top: 120px;}
+  100%  {top: 65px;}
+}
+
 .text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: stretch;
   width: 100%;
   height: 100vh;
-  padding-right: 50px;
   margin-top: 70px;
 }
 
@@ -172,7 +201,7 @@ h1 {
 
 #pricebefore {
   text-decoration: line-through;
-  text-decoration-color: blueviolet;
+  text-decoration-color: #6300FF;
   text-decoration-thickness: 6px;
   padding-right: 12px;
   padding-left: 12px;
@@ -217,15 +246,22 @@ h1 {
 }
 
 @media screen and (max-width:1000px) {
-  #mainillustration {
+  .illust, #mainillustration {
     width: 100%;
     height: auto;
     position: static;
   }
 
+  @keyframes mymove {
+    0%   {top: 300px;}
+    50%  {top: 250px;}
+    100%  {top: 300px;}
+  }
+
   .main {
     flex-direction: column;
     align-items: center;
+    margin-right: 0px;
   }
 
   .description, h1 {
