@@ -29,7 +29,7 @@ marquee {
   align-items: center;
   justify-content: space-between;
   height: 40px;
-  width: 100vw-10px;
+  width: 100vw;
   font-size: 30px;
   padding: 10px;
   border: solid 3px #000;
